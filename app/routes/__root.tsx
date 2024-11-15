@@ -3,6 +3,7 @@ import { createRootRoute } from "@tanstack/react-router";
 import { Outlet, ScrollRestoration } from "@tanstack/react-router";
 import { Meta, Scripts } from "@tanstack/start";
 import * as React from "react";
+import tailwind from "../app.css?url";
 
 export const Route = createRootRoute({
   meta: () => [
@@ -17,6 +18,7 @@ export const Route = createRootRoute({
       title: "TanStack Start Starter",
     },
   ],
+  links: () => [{ rel: "stylesheet", href: tailwind }],
   component: RootComponent,
 });
 
