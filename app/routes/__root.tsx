@@ -33,7 +33,6 @@ function RootComponent() {
   return (
     <RootDocument>
       <Outlet />
-      <TanStackRouterDevtools />
     </RootDocument>
   );
 }
@@ -48,6 +47,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         {children}
         <ScrollRestoration />
         <Scripts />
+        <TanStackRouterDevtools position="bottom-right" />
       </body>
     </html>
   );

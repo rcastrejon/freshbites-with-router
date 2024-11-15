@@ -13,6 +13,8 @@
 import { Route as rootRoute } from './routes/__root'
 import { Route as ShellImport } from './routes/_shell'
 import { Route as ShellIndexImport } from './routes/_shell.index'
+import { Route as ShellRecipesIndexImport } from './routes/_shell.recipes.index'
+import { Route as ShellRecipesRecipeIdImport } from './routes/_shell.recipes.$recipeId'
 
 // Create/Update Routes
 
@@ -24,6 +26,18 @@ const ShellRoute = ShellImport.update({
 const ShellIndexRoute = ShellIndexImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => ShellRoute,
+} as any)
+
+const ShellRecipesIndexRoute = ShellRecipesIndexImport.update({
+  id: '/recipes/',
+  path: '/recipes/',
+  getParentRoute: () => ShellRoute,
+} as any)
+
+const ShellRecipesRecipeIdRoute = ShellRecipesRecipeIdImport.update({
+  id: '/recipes/$recipeId',
+  path: '/recipes/$recipeId',
   getParentRoute: () => ShellRoute,
 } as any)
 
@@ -45,6 +59,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ShellIndexImport
       parentRoute: typeof ShellImport
     }
+    '/_shell/recipes/$recipeId': {
+      id: '/_shell/recipes/$recipeId'
+      path: '/recipes/$recipeId'
+      fullPath: '/recipes/$recipeId'
+      preLoaderRoute: typeof ShellRecipesRecipeIdImport
+      parentRoute: typeof ShellImport
+    }
+    '/_shell/recipes/': {
+      id: '/_shell/recipes/'
+      path: '/recipes'
+      fullPath: '/recipes'
+      preLoaderRoute: typeof ShellRecipesIndexImport
+      parentRoute: typeof ShellImport
+    }
   }
 }
 
@@ -52,10 +80,14 @@ declare module '@tanstack/react-router' {
 
 interface ShellRouteChildren {
   ShellIndexRoute: typeof ShellIndexRoute
+  ShellRecipesRecipeIdRoute: typeof ShellRecipesRecipeIdRoute
+  ShellRecipesIndexRoute: typeof ShellRecipesIndexRoute
 }
 
 const ShellRouteChildren: ShellRouteChildren = {
   ShellIndexRoute: ShellIndexRoute,
+  ShellRecipesRecipeIdRoute: ShellRecipesRecipeIdRoute,
+  ShellRecipesIndexRoute: ShellRecipesIndexRoute,
 }
 
 const ShellRouteWithChildren = ShellRoute._addFileChildren(ShellRouteChildren)
@@ -63,24 +95,35 @@ const ShellRouteWithChildren = ShellRoute._addFileChildren(ShellRouteChildren)
 export interface FileRoutesByFullPath {
   '': typeof ShellRouteWithChildren
   '/': typeof ShellIndexRoute
+  '/recipes/$recipeId': typeof ShellRecipesRecipeIdRoute
+  '/recipes': typeof ShellRecipesIndexRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof ShellIndexRoute
+  '/recipes/$recipeId': typeof ShellRecipesRecipeIdRoute
+  '/recipes': typeof ShellRecipesIndexRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/_shell': typeof ShellRouteWithChildren
   '/_shell/': typeof ShellIndexRoute
+  '/_shell/recipes/$recipeId': typeof ShellRecipesRecipeIdRoute
+  '/_shell/recipes/': typeof ShellRecipesIndexRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '' | '/'
+  fullPaths: '' | '/' | '/recipes/$recipeId' | '/recipes'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/_shell' | '/_shell/'
+  to: '/' | '/recipes/$recipeId' | '/recipes'
+  id:
+    | '__root__'
+    | '/_shell'
+    | '/_shell/'
+    | '/_shell/recipes/$recipeId'
+    | '/_shell/recipes/'
   fileRoutesById: FileRoutesById
 }
 
@@ -108,11 +151,21 @@ export const routeTree = rootRoute
     "/_shell": {
       "filePath": "_shell.tsx",
       "children": [
-        "/_shell/"
+        "/_shell/",
+        "/_shell/recipes/$recipeId",
+        "/_shell/recipes/"
       ]
     },
     "/_shell/": {
       "filePath": "_shell.index.tsx",
+      "parent": "/_shell"
+    },
+    "/_shell/recipes/$recipeId": {
+      "filePath": "_shell.recipes.$recipeId.tsx",
+      "parent": "/_shell"
+    },
+    "/_shell/recipes/": {
+      "filePath": "_shell.recipes.index.tsx",
       "parent": "/_shell"
     }
   }
