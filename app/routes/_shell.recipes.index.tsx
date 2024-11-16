@@ -15,7 +15,7 @@ const getRecipes = createServerFn()
   .validator(getRecipesSchema)
   .handler(async ({ data }) => {
     await new Promise((resolve) => setTimeout(resolve, 500));
-    const PAGE_SIZE = 6;
+    const PAGE_SIZE = 8;
 
     const start = (data.page - 1) * PAGE_SIZE;
     const end = start + PAGE_SIZE;
@@ -62,7 +62,7 @@ function RouteComponent() {
       <h3 className="mb-3 border-b-2 border-b-foreground pb-1 font-serif text-2xl font-bold">
         Recetas
       </h3>
-      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
         {recipes.map((recipe) => (
           <RecipeCard key={recipe.id} recipe={recipe} />
         ))}

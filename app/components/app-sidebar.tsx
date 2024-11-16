@@ -3,10 +3,15 @@ import {
   SidebarContent,
   SidebarFooter,
   SidebarGroup,
+  SidebarGroupContent,
   SidebarHeader,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import { Icon } from "lucide-react";
+import { Book, House, Icon } from "lucide-react";
 import { appleCore } from "@lucide/lab";
+import { Link } from "@tanstack/react-router";
 
 export function AppSidebar() {
   return (
@@ -24,8 +29,37 @@ export function AppSidebar() {
         </div>
       </SidebarHeader>
       <SidebarContent>
-        <SidebarGroup />
-        <SidebarGroup />
+        <SidebarGroup>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link
+                    to="/"
+                    activeOptions={{ includeSearch: false }}
+                    activeProps={{ "data-active": "true" }}
+                  >
+                    <House />
+                    Inicio
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link
+                    to="/recipes"
+                    search={{ page: 1 }}
+                    activeOptions={{ includeSearch: false }}
+                    activeProps={{ "data-active": "true" }}
+                  >
+                    <Book />
+                    Recetas
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
       </SidebarContent>
       <SidebarFooter />
     </Sidebar>

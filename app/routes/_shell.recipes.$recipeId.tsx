@@ -41,6 +41,19 @@ function RouteComponent() {
 
   return (
     <div>
+      <div
+        className="relative aspect-square"
+        style={{
+          viewTransitionName: `image-${recipe.id}`,
+        }}
+      >
+        <img
+          src={recipe.imageUrl}
+          alt={recipe.title}
+          loading="eager"
+          className="h-full w-full rounded-md object-cover"
+        />
+      </div>
       <h1>{recipe.title}</h1>
       <p>{recipe.description}</p>
     </div>
