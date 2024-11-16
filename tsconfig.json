@@ -1,7 +1,8 @@
 {
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
   "compilerOptions": {
     "strict": true,
+    "noUncheckedIndexedAccess": true,
     "esModuleInterop": true,
     "jsx": "react-jsx",
     "module": "ESNext",
@@ -18,5 +19,6 @@
       "@/*": ["./app/*"]
     },
     "noEmit": true
-  }
+  },
+  "exclude": [".output", ".vercel", ".vinxi"]
 }

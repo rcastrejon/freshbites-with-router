@@ -29,14 +29,14 @@ function ApplicationShell() {
 
 function Header() {
   return (
-    <header className="p-2 shadow-sm border-b-2 md:px-4 bg-white">
+    <header className="border-b-2 bg-white p-2 shadow-sm md:px-4">
       <div className="flex justify-between">
         <div>
           <div className="flex items-center gap-2 md:hidden">
             <SidebarTrigger />
-            <h2 className="text-2xl font-bold font-serif">
+            <h2 className="font-serif text-2xl font-bold">
               FreshB
-              <Icon iconNode={appleCore} className="inline h-5 w-5 mb-1.5" />
+              <Icon iconNode={appleCore} className="mb-1.5 inline h-5 w-5" />
               tes
             </h2>
           </div>

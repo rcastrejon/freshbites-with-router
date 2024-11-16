@@ -5,7 +5,7 @@ import { Meta, Scripts } from "@tanstack/start";
 import * as React from "react";
 import tailwind from "../app.css?url";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import { QueryClient } from "@tanstack/react-query";
+import { type QueryClient } from "@tanstack/react-query";
 
 const TanStackRouterDevtools =
   process.env.NODE_ENV === "production"

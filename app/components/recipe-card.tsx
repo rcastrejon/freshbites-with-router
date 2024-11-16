@@ -1,7 +1,7 @@
 import { Clock, Coins, Leaf, Utensils } from "lucide-react";
 import { Button } from "./ui/button";
 import { Card, CardContent, CardFooter } from "./ui/card";
-import { Recipe } from "@/lib/db/types";
+import { type Recipe } from "@/lib/db/types";
 import { Link } from "@tanstack/react-router";
 
 export function RecipeCard({ recipe }: { recipe: Recipe }) {
@@ -17,7 +17,7 @@ export function RecipeCard({ recipe }: { recipe: Recipe }) {
           <h4 className="font-serif text-base font-semibold leading-none text-card">
             {recipe.title}
           </h4>
-          <p className="mt-1 text-xs italic text-muted font-serif">
+          <p className="mt-1 font-serif text-xs italic text-muted">
             Por John Doe
           </p>
         </div>
