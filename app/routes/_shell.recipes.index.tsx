@@ -5,6 +5,7 @@ import { RecipeCard } from "@/components/recipe-card";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { queryOptions, useSuspenseQuery } from "@tanstack/react-query";
 
 const getRecipesSchema = z.object({
   page: z.number().int().positive(),
@@ -13,7 +14,6 @@ const getRecipesSchema = z.object({
 const getRecipes = createServerFn()
   .validator(getRecipesSchema)
   .handler(async ({ data }) => {
-    // fake delay
     await new Promise((resolve) => setTimeout(resolve, 500));
     const PAGE_SIZE = 6;
 
@@ -31,21 +31,31 @@ const getRecipes = createServerFn()
     };
   });
 
+const recipesQueryOptions = (page: number) =>
+  queryOptions({
+    queryKey: ["recipes", page],
+    queryFn: () => getRecipes({ data: { page } }),
+  });
+
 export const Route = createFileRoute("/_shell/recipes/")({
   validateSearch: z.object({
     page: z.number().int().positive().catch(1),
   }),
   loaderDeps: ({ search: { page } }) => ({ page }),
   component: RouteComponent,
-  loader: async ({ deps }) => await getRecipes({ data: deps }),
+  loader: async ({ context, deps }) => {
+    await context.queryClient.prefetchQuery(recipesQueryOptions(deps.page));
+  },
 });
 
 function RouteComponent() {
-  const {
-    recipes,
-    pagination: { hasNextPage, hasPreviousPage },
-  } = Route.useLoaderData();
   const { page } = Route.useLoaderDeps();
+  const {
+    data: {
+      recipes,
+      pagination: { hasPreviousPage, hasNextPage },
+    },
+  } = useSuspenseQuery(recipesQueryOptions(page));
 
   return (
     <div>
@@ -61,7 +71,11 @@ function RouteComponent() {
         <div className="col-start-1 justify-self-start">
           {hasPreviousPage && (
             <Button variant="link" asChild>
-              <Link to="/recipes" search={{ page: page - 1 }}>
+              <Link
+                to="/recipes"
+                resetScroll={false}
+                search={{ page: page - 1 }}
+              >
                 <ChevronLeft className="h-4 w-4" />
                 Atrás
               </Link>
@@ -71,7 +85,11 @@ function RouteComponent() {
         <div className="col-start-2 justify-self-end">
           {hasNextPage && (
             <Button variant="link" asChild>
-              <Link to="/recipes" search={{ page: page + 1 }}>
+              <Link
+                to="/recipes"
+                resetScroll={false}
+                search={{ page: page + 1 }}
+              >
                 Siguiente
                 <ChevronRight className="h-4 w-4" />
               </Link>
