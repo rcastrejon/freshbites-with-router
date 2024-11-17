@@ -1,9 +1,10 @@
-import { Clock, Coins, Leaf, Utensils } from "lucide-react";
+import { Clock, Coins, Leaf, ShieldCheck, Utensils } from "lucide-react";
 import { Button } from "./ui/button";
 import { Card, CardContent, CardFooter } from "./ui/card";
 import { type Recipe } from "@/lib/db/types";
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
+import { Badge } from "./ui/badge";
 
 export function RecipeCard({ recipe }: { recipe: Recipe }) {
   const [style, setStyle] = useState({});
@@ -25,6 +26,7 @@ export function RecipeCard({ recipe }: { recipe: Recipe }) {
             Por John Doe
           </p>
         </div>
+        <VerifiedBadge isVerified={recipe.verifiedAt !== null} />
       </div>
       <CardContent className="p-2">
         <div className="grid grid-cols-2 gap-1 text-xs">
@@ -77,5 +79,21 @@ function CalorieTag({
       <Leaf className="mr-1 h-3 w-3 text-muted-foreground" />{" "}
       {caloresPerServings} kcal
     </span>
+  );
+}
+
+export function VerifiedBadge({ isVerified }: { isVerified: boolean }) {
+  if (!isVerified) {
+    return (
+      <Badge className="absolute right-2 top-2 bg-orange-400 text-white">
+        Comunidad
+      </Badge>
+    );
+  }
+  return (
+    <Badge className="absolute right-2 top-2 bg-green-600 text-white">
+      <ShieldCheck className="mr-1 inline h-3 w-3" />
+      Verificado
+    </Badge>
   );
 }

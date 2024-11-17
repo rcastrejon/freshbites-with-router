@@ -10,9 +10,24 @@
     "servings": 4,
     "imageUrl": "https://utfs.io/f/HGtLyXVKOm0hB2YgJ715KnyX6S1F0Dukzd9eWCgxHpAlwVhj",
     "verifiedAt": 1731640173,
-    "ingredients": "[\"Lentejas\",\"Zanahoria\",\"Cebolla\",\"Ajo\",\"Caldo de verduras\"]",
-    "instructions": "[\"Picar la cebolla, zanahoria y ajo.\",\"Sofreír en una olla.\",\"Añadir las lentejas y el caldo.\",\"Cocinar hasta que las lentejas estén suaves.\"]",
-    "nutritionalFacts": "[{\"key\":\"Proteínas\",\"value\":\"20\",\"unit\":\"g\"},{\"key\":\"Carbohidratos\",\"value\":\"60\",\"unit\":\"g\"},{\"key\":\"Grasas\",\"value\":\"5\",\"unit\":\"g\"}]",
+    "ingredients": [
+      "Lentejas",
+      "Zanahoria",
+      "Cebolla",
+      "Ajo",
+      "Caldo de verduras"
+    ],
+    "instructions": [
+      "Picar la cebolla, zanahoria y ajo.",
+      "Sofreír en una olla.",
+      "Añadir las lentejas y el caldo.",
+      "Cocinar hasta que las lentejas estén suaves."
+    ],
+    "nutritionalFacts": [
+      { "key": "Proteínas", "value": "20", "unit": "g" },
+      { "key": "Carbohidratos", "value": "60", "unit": "g" },
+      { "key": "Grasas", "value": "5", "unit": "g" }
+    ],
     "createdAt": "2024-11-15 03:09:34"
   },
   {
@@ -26,9 +41,17 @@
     "servings": 1,
     "imageUrl": "https://utfs.io/f/HGtLyXVKOm0h6e0TDWJsIYigrHn50uWM87AxP14dVtNavZmE",
     "verifiedAt": 1731640173,
-    "ingredients": "[\"Papas\",\"Aceite de oliva\",\"Especias\"]",
-    "instructions": "[\"Corta las papas en cubos.\",\"Mezcla con aceite y especias.\",\"Hornea hasta que estén doradas.\"]",
-    "nutritionalFacts": "[{\"key\":\"Proteínas\",\"value\":\"5\",\"unit\":\"g\"},{\"key\":\"Carbohidratos\",\"value\":\"40\",\"unit\":\"g\"},{\"key\":\"Grasas\",\"value\":\"5\",\"unit\":\"g\"}]",
+    "ingredients": ["Papas", "Aceite de oliva", "Especias"],
+    "instructions": [
+      "Corta las papas en cubos.",
+      "Mezcla con aceite y especias.",
+      "Hornea hasta que estén doradas."
+    ],
+    "nutritionalFacts": [
+      { "key": "Proteínas", "value": "5", "unit": "g" },
+      { "key": "Carbohidratos", "value": "40", "unit": "g" },
+      { "key": "Grasas", "value": "5", "unit": "g" }
+    ],
     "createdAt": "2024-11-15 03:09:34"
   },
   {
@@ -42,9 +65,17 @@
     "servings": 1,
     "imageUrl": "https://utfs.io/f/HGtLyXVKOm0hKf7RXE5SGfqp7mk9ZCUj0crMX4QhYDEu1gNz",
     "verifiedAt": 1731640173,
-    "ingredients": "[\"Huevos\",\"Espinacas\",\"Cebolla\"]",
-    "instructions": "[\"Bate los huevos.\",\"Saltea la cebolla y las espinacas.\",\"Agrega los huevos batidos y cocina hasta que cuajen.\"]",
-    "nutritionalFacts": "[{\"key\":\"Proteínas\",\"value\":\"15\",\"unit\":\"g\"},{\"key\":\"Carbohidratos\",\"value\":\"5\",\"unit\":\"g\"},{\"key\":\"Grasas\",\"value\":\"10\",\"unit\":\"g\"}]",
+    "ingredients": ["Huevos", "Espinacas", "Cebolla"],
+    "instructions": [
+      "Bate los huevos.",
+      "Saltea la cebolla y las espinacas.",
+      "Agrega los huevos batidos y cocina hasta que cuajen."
+    ],
+    "nutritionalFacts": [
+      { "key": "Proteínas", "value": "15", "unit": "g" },
+      { "key": "Carbohidratos", "value": "5", "unit": "g" },
+      { "key": "Grasas", "value": "10", "unit": "g" }
+    ],
     "createdAt": "2024-11-15 03:09:34"
   },
   {
@@ -58,9 +89,9 @@
     "servings": 1,
     "imageUrl": "https://utfs.io/f/HGtLyXVKOm0hB2YgJ715KnyX6S1F0Dukzd9eWCgxHpAlwVhj",
     "verifiedAt": null,
-    "ingredients": "[\"Tortillas de maíz\",\"Frijoles refritos\",\"Queso\"]",
-    "instructions": "[\"Calienta las tortillas con frijoles y queso.\"]",
-    "nutritionalFacts": "[]",
+    "ingredients": ["Tortillas de maíz", "Frijoles refritos", "Queso"],
+    "instructions": ["Calienta las tortillas con frijoles y queso."],
+    "nutritionalFacts": [],
     "createdAt": "2024-11-15 03:09:34"
   },
   {
@@ -74,9 +105,12 @@
     "servings": 1,
     "imageUrl": "https://utfs.io/f/HGtLyXVKOm0hB2YgJ715KnyX6S1F0Dukzd9eWCgxHpAlwVhj",
     "verifiedAt": null,
-    "ingredients": "[\"Avena\",\"Plátano\",\"Huevo\",\"Leche\"]",
-    "instructions": "[\"Mezcla todos los ingredientes.\",\"Cocina las tortitas en una sartén.\"]",
-    "nutritionalFacts": "[]",
+    "ingredients": ["Avena", "Plátano", "Huevo", "Leche"],
+    "instructions": [
+      "Mezcla todos los ingredientes.",
+      "Cocina las tortitas en una sartén."
+    ],
+    "nutritionalFacts": [],
     "createdAt": "2024-11-15 03:09:34"
   },
   {
@@ -90,9 +124,19 @@
     "servings": 1,
     "imageUrl": "https://utfs.io/f/HGtLyXVKOm0h6e0TDWJsIYigrHn50uWM87AxP14dVtNavZmE",
     "verifiedAt": null,
-    "ingredients": "[\"Pasta integral\",\"Brócoli\",\"Zanahoria\",\"Calabacín\",\"Salsa de tomate\"]",
-    "instructions": "[\"Cocina la pasta.\",\"Saltea las verduras.\",\"Mezcla la pasta con las verduras y la salsa.\"]",
-    "nutritionalFacts": "[]",
+    "ingredients": [
+      "Pasta integral",
+      "Brócoli",
+      "Zanahoria",
+      "Calabacín",
+      "Salsa de tomate"
+    ],
+    "instructions": [
+      "Cocina la pasta.",
+      "Saltea las verduras.",
+      "Mezcla la pasta con las verduras y la salsa."
+    ],
+    "nutritionalFacts": [],
     "createdAt": "2024-11-15 03:09:34"
   },
   {
@@ -106,9 +150,23 @@
     "servings": 1,
     "imageUrl": "https://utfs.io/f/HGtLyXVKOm0hKf7RXE5SGfqp7mk9ZCUj0crMX4QhYDEu1gNz",
     "verifiedAt": 1731640173,
-    "ingredients": "[\"Arroz integral\",\"Pollo\",\"Brócoli\",\"Pimiento\",\"Cebolla\"]",
-    "instructions": "[\"Cocina el arroz.\",\"Saltea el pollo con las verduras.\",\"Mezcla el arroz con el pollo y las verduras.\"]",
-    "nutritionalFacts": "[{\"key\":\"Proteínas\",\"value\":\"25\",\"unit\":\"g\"},{\"key\":\"Carbohidratos\",\"value\":\"45\",\"unit\":\"g\"},{\"key\":\"Grasas\",\"value\":\"10\",\"unit\":\"g\"}]",
+    "ingredients": [
+      "Arroz integral",
+      "Pollo",
+      "Brócoli",
+      "Pimiento",
+      "Cebolla"
+    ],
+    "instructions": [
+      "Cocina el arroz.",
+      "Saltea el pollo con las verduras.",
+      "Mezcla el arroz con el pollo y las verduras."
+    ],
+    "nutritionalFacts": [
+      { "key": "Proteínas", "value": "25", "unit": "g" },
+      { "key": "Carbohidratos", "value": "45", "unit": "g" },
+      { "key": "Grasas", "value": "10", "unit": "g" }
+    ],
     "createdAt": "2024-11-15 03:09:34"
   },
   {
@@ -122,9 +180,18 @@
     "servings": 2,
     "imageUrl": "https://utfs.io/f/HGtLyXVKOm0hKf7RXE5SGfqp7mk9ZCUj0crMX4QhYDEu1gNz",
     "verifiedAt": 1731640173,
-    "ingredients": "[\"Pasta\",\"Salsa de tomate\",\"Ajo\",\"Aceite de oliva\"]",
-    "instructions": "[\"Hervir la pasta.\",\"Sofreír ajo en aceite.\",\"Añadir salsa de tomate.\",\"Mezclar con la pasta.\"]",
-    "nutritionalFacts": "[{\"key\":\"Proteínas\",\"value\":\"12\",\"unit\":\"g\"},{\"key\":\"Carbohidratos\",\"value\":\"70\",\"unit\":\"g\"},{\"key\":\"Grasas\",\"value\":\"8\",\"unit\":\"g\"}]",
+    "ingredients": ["Pasta", "Salsa de tomate", "Ajo", "Aceite de oliva"],
+    "instructions": [
+      "Hervir la pasta.",
+      "Sofreír ajo en aceite.",
+      "Añadir salsa de tomate.",
+      "Mezclar con la pasta."
+    ],
+    "nutritionalFacts": [
+      { "key": "Proteínas", "value": "12", "unit": "g" },
+      { "key": "Carbohidratos", "value": "70", "unit": "g" },
+      { "key": "Grasas", "value": "8", "unit": "g" }
+    ],
     "createdAt": "2024-11-15 03:09:34"
   },
   {
@@ -138,9 +205,13 @@
     "servings": 1,
     "imageUrl": "https://utfs.io/f/HGtLyXVKOm0h6e0TDWJsIYigrHn50uWM87AxP14dVtNavZmE",
     "verifiedAt": 1731640173,
-    "ingredients": "[\"Lentejas\",\"Zanahoria\",\"Papa\",\"Cebolla\",\"Ajo\"]",
-    "instructions": "[\"Cocina las lentejas con las verduras picadas.\"]",
-    "nutritionalFacts": "[{\"key\":\"Proteínas\",\"value\":\"20\",\"unit\":\"g\"},{\"key\":\"Carbohidratos\",\"value\":\"50\",\"unit\":\"g\"},{\"key\":\"Grasas\",\"value\":\"5\",\"unit\":\"g\"}]",
+    "ingredients": ["Lentejas", "Zanahoria", "Papa", "Cebolla", "Ajo"],
+    "instructions": ["Cocina las lentejas con las verduras picadas."],
+    "nutritionalFacts": [
+      { "key": "Proteínas", "value": "20", "unit": "g" },
+      { "key": "Carbohidratos", "value": "50", "unit": "g" },
+      { "key": "Grasas", "value": "5", "unit": "g" }
+    ],
     "createdAt": "2024-11-15 03:09:34"
   },
   {
@@ -154,9 +225,23 @@
     "servings": 1,
     "imageUrl": "https://utfs.io/f/HGtLyXVKOm0hKf7RXE5SGfqp7mk9ZCUj0crMX4QhYDEu1gNz",
     "verifiedAt": 1731640173,
-    "ingredients": "[\"Pan integral\",\"Atún en agua\",\"Mayonesa baja en grasa\",\"Lechuga\",\"Tomate\"]",
-    "instructions": "[\"Mezcla el atún con la mayonesa.\",\"Agrega lechuga y tomate.\",\"Coloca la mezcla en el pan integral.\"]",
-    "nutritionalFacts": "[{\"key\":\"Proteínas\",\"value\":\"20\",\"unit\":\"g\"},{\"key\":\"Carbohidratos\",\"value\":\"30\",\"unit\":\"g\"},{\"key\":\"Grasas\",\"value\":\"5\",\"unit\":\"g\"}]",
+    "ingredients": [
+      "Pan integral",
+      "Atún en agua",
+      "Mayonesa baja en grasa",
+      "Lechuga",
+      "Tomate"
+    ],
+    "instructions": [
+      "Mezcla el atún con la mayonesa.",
+      "Agrega lechuga y tomate.",
+      "Coloca la mezcla en el pan integral."
+    ],
+    "nutritionalFacts": [
+      { "key": "Proteínas", "value": "20", "unit": "g" },
+      { "key": "Carbohidratos", "value": "30", "unit": "g" },
+      { "key": "Grasas", "value": "5", "unit": "g" }
+    ],
     "createdAt": "2024-11-15 03:09:34"
   },
   {
@@ -170,9 +255,23 @@
     "servings": 2,
     "imageUrl": "https://utfs.io/f/HGtLyXVKOm0hKf7RXE5SGfqp7mk9ZCUj0crMX4QhYDEu1gNz",
     "verifiedAt": 1731640173,
-    "ingredients": "[\"Tortillas de maíz\",\"Frijoles refritos\",\"Queso fresco\",\"Salsa al gusto\"]",
-    "instructions": "[\"Calentar las tortillas.\",\"Untar frijoles refritos en cada tortilla.\",\"Agregar queso fresco desmoronado.\",\"Añadir salsa al gusto.\"]",
-    "nutritionalFacts": "[{\"key\":\"Proteínas\",\"value\":\"15\",\"unit\":\"g\"},{\"key\":\"Carbohidratos\",\"value\":\"50\",\"unit\":\"g\"},{\"key\":\"Grasas\",\"value\":\"10\",\"unit\":\"g\"}]",
+    "ingredients": [
+      "Tortillas de maíz",
+      "Frijoles refritos",
+      "Queso fresco",
+      "Salsa al gusto"
+    ],
+    "instructions": [
+      "Calentar las tortillas.",
+      "Untar frijoles refritos en cada tortilla.",
+      "Agregar queso fresco desmoronado.",
+      "Añadir salsa al gusto."
+    ],
+    "nutritionalFacts": [
+      { "key": "Proteínas", "value": "15", "unit": "g" },
+      { "key": "Carbohidratos", "value": "50", "unit": "g" },
+      { "key": "Grasas", "value": "10", "unit": "g" }
+    ],
     "createdAt": "2024-11-15 03:09:34"
   },
   {
@@ -186,9 +285,23 @@
     "servings": 1,
     "imageUrl": "https://utfs.io/f/HGtLyXVKOm0hB2YgJ715KnyX6S1F0Dukzd9eWCgxHpAlwVhj",
     "verifiedAt": 1731640173,
-    "ingredients": "[\"Garbanzos cocidos\",\"Tomate\",\"Cebolla\",\"Pepino\",\"Limón\",\"Aceite de oliva\"]",
-    "instructions": "[\"Combina los garbanzos, tomate, cebolla y pepino picados.\",\"Adereza con limón y aceite de oliva.\"]",
-    "nutritionalFacts": "[{\"key\":\"Proteínas\",\"value\":\"15\",\"unit\":\"g\"},{\"key\":\"Carbohidratos\",\"value\":\"40\",\"unit\":\"g\"},{\"key\":\"Grasas\",\"value\":\"10\",\"unit\":\"g\"}]",
+    "ingredients": [
+      "Garbanzos cocidos",
+      "Tomate",
+      "Cebolla",
+      "Pepino",
+      "Limón",
+      "Aceite de oliva"
+    ],
+    "instructions": [
+      "Combina los garbanzos, tomate, cebolla y pepino picados.",
+      "Adereza con limón y aceite de oliva."
+    ],
+    "nutritionalFacts": [
+      { "key": "Proteínas", "value": "15", "unit": "g" },
+      { "key": "Carbohidratos", "value": "40", "unit": "g" },
+      { "key": "Grasas", "value": "10", "unit": "g" }
+    ],
     "createdAt": "2024-11-15 03:09:34"
   },
   {
@@ -202,9 +315,18 @@
     "servings": 1,
     "imageUrl": "https://utfs.io/f/HGtLyXVKOm0hB2YgJ715KnyX6S1F0Dukzd9eWCgxHpAlwVhj",
     "verifiedAt": 1731640173,
-    "ingredients": "[\"Arroz\",\"Huevos\",\"Aceite\",\"Sal\"]",
-    "instructions": "[\"Cocinar el arroz.\",\"Freír huevos.\",\"Mezclar con el arroz.\",\"Sazonar con sal.\"]",
-    "nutritionalFacts": "[{\"key\":\"Proteínas\",\"value\":\"18\",\"unit\":\"g\"},{\"key\":\"Carbohidratos\",\"value\":\"45\",\"unit\":\"g\"},{\"key\":\"Grasas\",\"value\":\"12\",\"unit\":\"g\"}]",
+    "ingredients": ["Arroz", "Huevos", "Aceite", "Sal"],
+    "instructions": [
+      "Cocinar el arroz.",
+      "Freír huevos.",
+      "Mezclar con el arroz.",
+      "Sazonar con sal."
+    ],
+    "nutritionalFacts": [
+      { "key": "Proteínas", "value": "18", "unit": "g" },
+      { "key": "Carbohidratos", "value": "45", "unit": "g" },
+      { "key": "Grasas", "value": "12", "unit": "g" }
+    ],
     "createdAt": "2024-11-15 03:09:34"
   },
   {
@@ -218,9 +340,18 @@
     "servings": 2,
     "imageUrl": "https://utfs.io/f/HGtLyXVKOm0hKf7RXE5SGfqp7mk9ZCUj0crMX4QhYDEu1gNz",
     "verifiedAt": 1731640173,
-    "ingredients": "[\"Nopales\",\"Tomate\",\"Cebolla\",\"Cilantro\",\"Limón\"]",
-    "instructions": "[\"Cocer los nopales.\",\"Picar tomate, cebolla y cilantro.\",\"Mezclar todo.\",\"Aderezar con limón.\"]",
-    "nutritionalFacts": "[{\"key\":\"Proteínas\",\"value\":\"8\",\"unit\":\"g\"},{\"key\":\"Carbohidratos\",\"value\":\"25\",\"unit\":\"g\"},{\"key\":\"Grasas\",\"value\":\"5\",\"unit\":\"g\"}]",
+    "ingredients": ["Nopales", "Tomate", "Cebolla", "Cilantro", "Limón"],
+    "instructions": [
+      "Cocer los nopales.",
+      "Picar tomate, cebolla y cilantro.",
+      "Mezclar todo.",
+      "Aderezar con limón."
+    ],
+    "nutritionalFacts": [
+      { "key": "Proteínas", "value": "8", "unit": "g" },
+      { "key": "Carbohidratos", "value": "25", "unit": "g" },
+      { "key": "Grasas", "value": "5", "unit": "g" }
+    ],
     "createdAt": "2024-11-15 03:09:34"
   },
   {
@@ -234,9 +365,15 @@
     "servings": 1,
     "imageUrl": "https://utfs.io/f/HGtLyXVKOm0hKf7RXE5SGfqp7mk9ZCUj0crMX4QhYDEu1gNz",
     "verifiedAt": 1731640173,
-    "ingredients": "[\"Tortillas de harina\",\"Jamón\",\"Queso Oaxaca\"]",
-    "instructions": "[\"Coloca una tortilla en un sartén caliente. Agrega jamón y queso. Cubre con otra tortilla y cocina por ambos lados.\"]",
-    "nutritionalFacts": "[{\"key\":\"Proteínas\",\"value\":\"15\",\"unit\":\"g\"},{\"key\":\"Carbohidratos\",\"value\":\"20\",\"unit\":\"g\"},{\"key\":\"Grasas\",\"value\":\"10\",\"unit\":\"g\"}]",
+    "ingredients": ["Tortillas de harina", "Jamón", "Queso Oaxaca"],
+    "instructions": [
+      "Coloca una tortilla en un sartén caliente. Agrega jamón y queso. Cubre con otra tortilla y cocina por ambos lados."
+    ],
+    "nutritionalFacts": [
+      { "key": "Proteínas", "value": "15", "unit": "g" },
+      { "key": "Carbohidratos", "value": "20", "unit": "g" },
+      { "key": "Grasas", "value": "10", "unit": "g" }
+    ],
     "createdAt": "2024-11-15 03:09:34"
   },
   {
@@ -250,9 +387,18 @@
     "servings": 1,
     "imageUrl": "https://utfs.io/f/HGtLyXVKOm0h6e0TDWJsIYigrHn50uWM87AxP14dVtNavZmE",
     "verifiedAt": 1731640173,
-    "ingredients": "[\"Pan integral\",\"Atún en lata\",\"Mayonesa\",\"Lechuga\"]",
-    "instructions": "[\"Mezclar atún con mayonesa.\",\"Untar en el pan.\",\"Añadir lechuga.\",\"Cerrar el sándwich.\"]",
-    "nutritionalFacts": "[{\"key\":\"Proteínas\",\"value\":\"20\",\"unit\":\"g\"},{\"key\":\"Carbohidratos\",\"value\":\"35\",\"unit\":\"g\"},{\"key\":\"Grasas\",\"value\":\"15\",\"unit\":\"g\"}]",
+    "ingredients": ["Pan integral", "Atún en lata", "Mayonesa", "Lechuga"],
+    "instructions": [
+      "Mezclar atún con mayonesa.",
+      "Untar en el pan.",
+      "Añadir lechuga.",
+      "Cerrar el sándwich."
+    ],
+    "nutritionalFacts": [
+      { "key": "Proteínas", "value": "20", "unit": "g" },
+      { "key": "Carbohidratos", "value": "35", "unit": "g" },
+      { "key": "Grasas", "value": "15", "unit": "g" }
+    ],
     "createdAt": "2024-11-15 03:09:34"
   },
   {
@@ -266,9 +412,18 @@
     "servings": 1,
     "imageUrl": "https://utfs.io/f/HGtLyXVKOm0h6e0TDWJsIYigrHn50uWM87AxP14dVtNavZmE",
     "verifiedAt": 1731640173,
-    "ingredients": "[\"Tortillas de harina\",\"Queso Oaxaca\"]",
-    "instructions": "[\"Calentar una tortilla en un sartén.\",\"Añadir queso.\",\"Doblar la tortilla.\",\"Cocinar hasta que el queso se derrita.\"]",
-    "nutritionalFacts": "[{\"key\":\"Proteínas\",\"value\":\"15\",\"unit\":\"g\"},{\"key\":\"Carbohidratos\",\"value\":\"30\",\"unit\":\"g\"},{\"key\":\"Grasas\",\"value\":\"15\",\"unit\":\"g\"}]",
+    "ingredients": ["Tortillas de harina", "Queso Oaxaca"],
+    "instructions": [
+      "Calentar una tortilla en un sartén.",
+      "Añadir queso.",
+      "Doblar la tortilla.",
+      "Cocinar hasta que el queso se derrita."
+    ],
+    "nutritionalFacts": [
+      { "key": "Proteínas", "value": "15", "unit": "g" },
+      { "key": "Carbohidratos", "value": "30", "unit": "g" },
+      { "key": "Grasas", "value": "15", "unit": "g" }
+    ],
     "createdAt": "2024-11-15 03:09:34"
   }
 ]

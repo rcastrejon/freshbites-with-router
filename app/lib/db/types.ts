@@ -6,4 +6,5 @@ export type Recipe = {
   cost: number;
   servings: number;
   caloriesPerServing?: number | null;
+  verifiedAt: number | null;
 };
