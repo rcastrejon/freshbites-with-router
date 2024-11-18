@@ -1,3 +1,4 @@
+import { NewRecipeSheet } from "@/components/new-recipe";
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/_shell/")({
@@ -5,5 +6,9 @@ export const Route = createFileRoute("/_shell/")({
 });
 
 function HomePage() {
-  return <div>Hola, mundo!</div>;
+  return (
+    <div>
+      <NewRecipeSheet />
+    </div>
+  );
 }

@@ -49,7 +49,7 @@ function Header() {
         <div className="col-start-2 hidden md:block">
           <SearchInput />
         </div>
-        <div className="col-start-3 flex items-center justify-self-end">
+        <div className="col-start-3 flex items-center gap-2 justify-self-end">
           <SignedIn>
             <UserButton />
           </SignedIn>
