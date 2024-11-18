@@ -55,7 +55,12 @@ function Header() {
           </SignedIn>
           <SignedOut>
             <Button size="sm" asChild>
-              <SignInButton>Iniciar sesión</SignInButton>
+              <SignInButton
+                forceRedirectUrl={Route.path}
+                signUpForceRedirectUrl={Route.path}
+              >
+                Iniciar sesión
+              </SignInButton>
             </Button>
           </SignedOut>
         </div>
