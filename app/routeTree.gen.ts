@@ -13,6 +13,8 @@
 import { Route as rootRoute } from './routes/__root'
 import { Route as ShellImport } from './routes/_shell'
 import { Route as ShellIndexImport } from './routes/_shell.index'
+import { Route as SignUpSplatImport } from './routes/sign-up.$'
+import { Route as SignInSplatImport } from './routes/sign-in.$'
 import { Route as ShellRecipesIndexImport } from './routes/_shell.recipes.index'
 import { Route as ShellRecipesRecipeIdImport } from './routes/_shell.recipes.$recipeId'
 
@@ -27,6 +29,18 @@ const ShellIndexRoute = ShellIndexImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => ShellRoute,
+} as any)
+
+const SignUpSplatRoute = SignUpSplatImport.update({
+  id: '/sign-up/$',
+  path: '/sign-up/$',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const SignInSplatRoute = SignInSplatImport.update({
+  id: '/sign-in/$',
+  path: '/sign-in/$',
+  getParentRoute: () => rootRoute,
 } as any)
 
 const ShellRecipesIndexRoute = ShellRecipesIndexImport.update({
@@ -50,6 +64,20 @@ declare module '@tanstack/react-router' {
       path: ''
       fullPath: ''
       preLoaderRoute: typeof ShellImport
+      parentRoute: typeof rootRoute
+    }
+    '/sign-in/$': {
+      id: '/sign-in/$'
+      path: '/sign-in/$'
+      fullPath: '/sign-in/$'
+      preLoaderRoute: typeof SignInSplatImport
+      parentRoute: typeof rootRoute
+    }
+    '/sign-up/$': {
+      id: '/sign-up/$'
+      path: '/sign-up/$'
+      fullPath: '/sign-up/$'
+      preLoaderRoute: typeof SignUpSplatImport
       parentRoute: typeof rootRoute
     }
     '/_shell/': {
@@ -94,12 +122,16 @@ const ShellRouteWithChildren = ShellRoute._addFileChildren(ShellRouteChildren)
 
 export interface FileRoutesByFullPath {
   '': typeof ShellRouteWithChildren
+  '/sign-in/$': typeof SignInSplatRoute
+  '/sign-up/$': typeof SignUpSplatRoute
   '/': typeof ShellIndexRoute
   '/recipes/$recipeId': typeof ShellRecipesRecipeIdRoute
   '/recipes': typeof ShellRecipesIndexRoute
 }
 
 export interface FileRoutesByTo {
+  '/sign-in/$': typeof SignInSplatRoute
+  '/sign-up/$': typeof SignUpSplatRoute
   '/': typeof ShellIndexRoute
   '/recipes/$recipeId': typeof ShellRecipesRecipeIdRoute
   '/recipes': typeof ShellRecipesIndexRoute
@@ -108,6 +140,8 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/_shell': typeof ShellRouteWithChildren
+  '/sign-in/$': typeof SignInSplatRoute
+  '/sign-up/$': typeof SignUpSplatRoute
   '/_shell/': typeof ShellIndexRoute
   '/_shell/recipes/$recipeId': typeof ShellRecipesRecipeIdRoute
   '/_shell/recipes/': typeof ShellRecipesIndexRoute
@@ -115,12 +149,20 @@ export interface FileRoutesById {
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '' | '/' | '/recipes/$recipeId' | '/recipes'
+  fullPaths:
+    | ''
+    | '/sign-in/$'
+    | '/sign-up/$'
+    | '/'
+    | '/recipes/$recipeId'
+    | '/recipes'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/recipes/$recipeId' | '/recipes'
+  to: '/sign-in/$' | '/sign-up/$' | '/' | '/recipes/$recipeId' | '/recipes'
   id:
     | '__root__'
     | '/_shell'
+    | '/sign-in/$'
+    | '/sign-up/$'
     | '/_shell/'
     | '/_shell/recipes/$recipeId'
     | '/_shell/recipes/'
@@ -129,10 +171,14 @@ export interface FileRouteTypes {
 
 export interface RootRouteChildren {
   ShellRoute: typeof ShellRouteWithChildren
+  SignInSplatRoute: typeof SignInSplatRoute
+  SignUpSplatRoute: typeof SignUpSplatRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   ShellRoute: ShellRouteWithChildren,
+  SignInSplatRoute: SignInSplatRoute,
+  SignUpSplatRoute: SignUpSplatRoute,
 }
 
 export const routeTree = rootRoute
@@ -145,7 +191,9 @@ export const routeTree = rootRoute
     "__root__": {
       "filePath": "__root.tsx",
       "children": [
-        "/_shell"
+        "/_shell",
+        "/sign-in/$",
+        "/sign-up/$"
       ]
     },
     "/_shell": {
@@ -155,6 +203,12 @@ export const routeTree = rootRoute
         "/_shell/recipes/$recipeId",
         "/_shell/recipes/"
       ]
+    },
+    "/sign-in/$": {
+      "filePath": "sign-in.$.tsx"
+    },
+    "/sign-up/$": {
+      "filePath": "sign-up.$.tsx"
     },
     "/_shell/": {
       "filePath": "_shell.index.tsx",

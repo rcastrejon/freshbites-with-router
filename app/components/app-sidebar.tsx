@@ -12,12 +12,13 @@ import {
 import { Book, House, Icon } from "lucide-react";
 import { appleCore } from "@lucide/lab";
 import { Link } from "@tanstack/react-router";
+import { SearchInput } from "./search";
 
 export function AppSidebar() {
   return (
     <Sidebar>
       <SidebarHeader>
-        <div className="flex items-center">
+        <div className="flex h-8 items-center">
           <h2 className="font-serif text-3xl font-bold md:text-2xl">
             FreshB
             <Icon
@@ -29,6 +30,11 @@ export function AppSidebar() {
         </div>
       </SidebarHeader>
       <SidebarContent>
+        <SidebarGroup className="md:hidden">
+          <SidebarGroupContent>
+            <SearchInput />
+          </SidebarGroupContent>
+        </SidebarGroup>
         <SidebarGroup>
           <SidebarGroupContent>
             <SidebarMenu>

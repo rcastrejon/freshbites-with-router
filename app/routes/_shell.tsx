@@ -8,6 +8,13 @@ import {
 import { createFileRoute, Outlet } from "@tanstack/react-router";
 import { Icon } from "lucide-react";
 import { appleCore } from "@lucide/lab";
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  UserButton,
+} from "@clerk/tanstack-start";
+import { SearchInput } from "@/components/search";
 
 export const Route = createFileRoute("/_shell")({
   component: ApplicationShell,
@@ -30,19 +37,27 @@ function ApplicationShell() {
 function Header() {
   return (
     <header className="border-b-2 bg-white p-2 shadow-sm md:px-4">
-      <div className="flex justify-between">
-        <div>
-          <div className="flex items-center gap-2 md:hidden">
-            <SidebarTrigger />
-            <h2 className="font-serif text-2xl font-bold">
-              FreshB
-              <Icon iconNode={appleCore} className="mb-1.5 inline h-5 w-5" />
-              tes
-            </h2>
-          </div>
+      <div className="grid h-8 grid-cols-[1fr,_max-fit,_1fr]">
+        <div className="col-start-1 flex items-center gap-2 md:hidden">
+          <SidebarTrigger />
+          <h2 className="font-serif text-2xl font-bold">
+            FreshB
+            <Icon iconNode={appleCore} className="mb-1.5 inline h-5 w-5" />
+            tes
+          </h2>
         </div>
-        <div className="flex items-center">
-          <Button size="sm">Iniciar sesión</Button>
+        <div className="col-start-2 hidden md:block">
+          <SearchInput />
+        </div>
+        <div className="col-start-3 flex items-center justify-self-end">
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
+          <SignedOut>
+            <Button size="sm" asChild>
+              <SignInButton>Iniciar sesión</SignInButton>
+            </Button>
+          </SignedOut>
         </div>
       </div>
     </header>

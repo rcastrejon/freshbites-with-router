@@ -39,17 +39,21 @@ const recipesQueryOptions = (page: number) =>
 
 export const Route = createFileRoute("/_shell/recipes/")({
   validateSearch: z.object({
-    page: z.number().int().positive().catch(1),
+    page: z.number().int().positive().optional().catch(1),
+    q: z.string().min(1).optional(),
   }),
   loaderDeps: ({ search: { page } }) => ({ page }),
   component: RouteComponent,
   loader: async ({ context, deps }) => {
-    await context.queryClient.prefetchQuery(recipesQueryOptions(deps.page));
+    await context.queryClient.prefetchQuery(
+      recipesQueryOptions(deps.page ?? 1),
+    );
   },
 });
 
 function RouteComponent() {
-  const { page } = Route.useLoaderDeps();
+  const deps = Route.useLoaderDeps();
+  const page = deps.page ?? 1;
   const {
     data: {
       recipes,

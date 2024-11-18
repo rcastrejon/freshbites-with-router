@@ -6,6 +6,8 @@ import * as React from "react";
 import tailwind from "../app.css?url";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { type QueryClient } from "@tanstack/react-query";
+import { ClerkProvider } from "@clerk/tanstack-start";
+import { esMX } from "@clerk/localizations";
 
 const TanStackRouterDevtools =
   process.env.NODE_ENV === "production"
@@ -52,19 +54,21 @@ function RootComponent() {
 
 function RootDocument({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es">
-      <head>
-        <Meta />
-      </head>
-      <body>
-        {children}
-        <ScrollRestoration />
-        <Scripts />
-        <React.Suspense>
-          <TanStackRouterDevtools position="bottom-right" />
-        </React.Suspense>
-        <ReactQueryDevtools buttonPosition="bottom-left" />
-      </body>
-    </html>
+    <ClerkProvider localization={esMX}>
+      <html lang="es">
+        <head>
+          <Meta />
+        </head>
+        <body>
+          {children}
+          <ScrollRestoration />
+          <Scripts />
+          <React.Suspense>
+            <TanStackRouterDevtools position="bottom-right" />
+          </React.Suspense>
+          <ReactQueryDevtools buttonPosition="bottom-left" />
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
