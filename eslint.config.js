@@ -1,6 +1,5 @@
-// @ts-check
-
 import tseslint from "typescript-eslint";
+import reactCompiler from "eslint-plugin-react-compiler";
 
 export default tseslint.config(
   ...tseslint.configs.recommendedTypeChecked,
@@ -29,6 +28,15 @@ export default tseslint.config(
         "error",
         { checksVoidReturn: { attributes: false } },
       ],
+    },
+  },
+  {
+    plugins: {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      "react-compiler": reactCompiler,
+    },
+    rules: {
+      "react-compiler/react-compiler": "error",
     },
   },
   {
